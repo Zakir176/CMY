@@ -887,3 +887,118 @@
                     <h3>Prayer Times</h3>
                     <p>Accurate prayer times for Copperbelt cities with notifications and Qibla direction.</p>
                     <a href="#" class="btn-primary">View Prayer Times</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Lectures</h3>
+                    <p>Educational videos on Islamic topics, youth development, and career guidance.</p>
+                    <a href="#" class="btn-primary">Watch Videos</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Q&A Forum</h3>
+                    <p>Ask questions and get answers from qualified Islamic scholars and mentors.</p>
+                    <a href="#" class="btn-primary">Join Forum</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for latest events and updates</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email">
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Kitwe Islamic Center<br>
+                        <i class="fas fa-phone"></i> +260 76 543 2100<br>
+                        <i class="fas fa-envelope"></i> info@cmy.org.zm
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Copperbelt Muslim Youth. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/260765432100" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Donation Modal -->
+    <div id="donationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDonationModal()">&times;</span>
+            <h2>Support Our Cause</h2>
+            <p>Your donation helps us empower more young Muslims in the Copperbelt region.</p>
+            <form id="donationForm">
+                <input type="number" placeholder="Amount (ZMW)" required>
+                <button type="submit" class="btn-primary">Donate Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Modal Functions
+        function openDonationModal() {
+            document.getElementById('donationModal').style.display = 'block';
+        }
+
+        function closeDonationModal() {
+            document.getElementById('donationModal').style.display = 'none';
+        }
+
+        // RSVP Function
+        function rsvpEvent(eventName) {
+            alert(`Thank you for your interest in ${eventName}. We'll contact you with more details soon.`);
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('donationModal')) {
+                closeDonationModal();
+            }
+        }
+    </script>
+</body>
+</html></div>
