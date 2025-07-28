@@ -1,0 +1,852 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMY - Copperbelt Muslim Youth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        islamicGreen: '#028a0f',
+                        lightGreen: '#e6f7e6',
+                        darkGreen: '#015a09'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1600x900') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .quran-bg {
+            background: url('https://placehold.co/1200x800') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .resource-card {
+            transition: all 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .arabic {
+            direction: rtl;
+            font-family: 'amiri', serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Announcement Bar -->
+    <div class="bg-islamicGreen text-white py-2 px-4 text-center">
+        <p>📢 Ramadan Mubarak! Join us for daily Taraweeh prayers at the Islamic Center - 7:30 PM 🕌</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/50x50" alt="CMY Logo - Green circular logo with mosque silhouette and CMY text" class="h-12">
+                <a href="#" class="text-2xl font-bold text-islamicGreen">CMY</a>
+            </div>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-800 hover:text-islamicGreen font-medium">Home</a>
+                <a href="#about" class="text-gray-800 hover:text-islamicGreen font-medium">About</a>
+                <a href="#events" class="text-gray-800 hover:text-islamicGreen font-medium">Events</a>
+                <a href="#programs" class="text-gray-800 hover:text-islamicGreen font-medium">Programs</a>
+                <a href="#blog" class="text-gray-800 hover:text-islamicGreen font-medium">Blog</a>
+                <a href="#resources" class="text-gray-800 hover:text-islamicGreen font-medium">Resources</a>
+                <a href="#contact" class="text-gray-800 hover:text-islamicGreen font-medium">Contact</a>
+            </div>
+            
+            <button id="menu-toggle" class="md:hidden text-gray-800">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white shadow-lg pb-4">
+            <a href="#home" class="block px-4 py-2 text-gray-800 hover:bg-lightGreen">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-lightGreen">About</a>
+            <a href="#events" class="block px-4 py-2 text-gray-800 hover:bg-lightGreen">Events</a>
+            <a href="#programs" class="block px-4 py-2 text-gray-800 hover:bg-lightGreen">Programs</a>
+            <a href="#blog" class="block px-4 py-2 text-gray-800 hover:bg-lightGreen">Blog</a>
+            <a href="#resources" class="block px-4 py-2 text-gray-800 hover:bg-lightGreen">Resources</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-lightGreen">Contact</a>
+            <a href="#donate" class="block px-4 py-2 bg-islamicGreen text-white mx-4 rounded text-center">
+                Donate <i class="fas fa-heart ml-1"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">COPPERBELT MUSLIM YOUTH</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Empowering Muslim youth in Zambia's Copperbelt through faith, education, and community service</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#register" class="bg-islamicGreen hover:bg-darkGreen px-6 py-3 rounded-full font-medium text-lg">Join Us</a>
+                <a href="#donate" class="bg-white hover:bg-gray-100 text-islamicGreen px-6 py-3 rounded-full font-medium text-lg">Donate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quran Quote Section -->
+    <section class="quran-bg text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="arabic text-center text-3xl mb-6">۞ يَـٰٓأَيُّہَا ٱلَّذِينَ ءَامَنُواْ ٱتَّقُواْ ٱللَّهَ وَكُونُواْ مَعَ ٱلصَّـٰدِقِينَ ۞</div>
+            <p class="text-center text-xl max-w-2xl mx-auto">"O you who believe! Fear Allah, and be with those who are true (in words and deeds)." (Quran 9:119)</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-islamicGreen">ABOUT CMY</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400" alt="Diverse group of Muslim youth in Zambia gathered together smiling and discussing" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4 text-darkGreen">Our Mission</h3>
+                    <p class="mb-6 text-gray-700">Copperbelt Muslim Youth (CMY) is dedicated to nurturing the spiritual, intellectual, and social development of Muslim youth in Zambia's Copperbelt region. Founded in 2015, we've grown into a vibrant community of over 500 active members aged 15-30.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4 text-darkGreen">Our Vision</h3>
+                    <p class="mb-6 text-gray-700">To develop a generation of confident, God-conscious Muslim youth who positively impact society while preserving their Islamic identity in multicultural Zambia.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="border-l-4 border-islamicGreen pl-4">
+                            <h4 class="font-bold text-lg">500+ Members</h4>
+                            <p class="text-gray-600">Active youth</p>
+                        </div>
+                        <div class="border-l-4 border-islamicGreen pl-4">
+                            <h4 class="font-bold text-lg">8 Districts</h4>
+                            <p class="text-gray-600">Across Copperbelt</p>
+                        </div>
+                        <div class="border-l-4 border-islamicGreen pl-4">
+                            <h4 class="font-bold text-lg">35 Events</h4>
+                            <p class="text-gray-600">Yearly</p>
+                        </div>
+                        <div class="border-l-4 border-islamicGreen pl-4">
+                            <h4 class="font-bold text-lg">12 Programs</h4>
+                            <p class="text-gray-600">Running</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="py-16 bg-lightGreen">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-darkGreen">OUR CORE VALUES</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-islamicGreen text-4xl mb-4">
+                        <i class="fas fa-book-quran"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Islamic Foundation</h3>
+                    <p class="text-gray-700">Rooted in Quran and authentic Sunnah, we seek to please Allah in all our activities while promoting moderate Islam.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-islamicGreen text-4xl mb-4">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Community Service</h3>
+                    <p class="text-gray-700">Active engagement in social welfare projects benefiting both Muslims and non-Muslims in Copperbelt communities.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-islamicGreen text-4xl mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Youth Development</h3>
+                    <p class="text-gray-700">Educational programs that build leadership skills, career readiness, and personal development for Zambian Muslim youth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-islamicGreen">UPCOMING EVENTS</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event Card 1 -->
+                <div class="event-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://placehold.co/600x400" alt="Islamic lecture in progress with youth listening attentively" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-lightGreen text-islamicGreen px-3 py-1 rounded-full text-sm font-medium">Lecture</span>
+                            <span class="text-gray-500 text-sm"><i class="far fa-calendar-alt mr-1"></i> 15th June 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Monthly Tafsir Series</h3>
+                        <p class="text-gray-600 mb-4">Journey through Surah Al-Kahf with Sheikh Ibrahim Phiri at Kitwe Islamic Center</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500"><i class="far fa-clock mr-1"></i> 4:00 PM</span>
+                            <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">RSVP <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 2 -->
+                <div class="event-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://placehold.co/600x400" alt="Group of youth engaged in outdoor sports activities" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-lightGreen text-islamicGreen px-3 py-1 rounded-full text-sm font-medium">Sports</span>
+                            <span class="text-gray-500 text-sm"><i class="far fa-calendar-alt mr-1"></i> 24th June 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Annual CMY Sports Day</h3>
+                        <p class="text-gray-600 mb-4">Football, volleyball, and athletics competition at Ndola Sports Complex</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500"><i class="far fa-clock mr-1"></i> 8:00 AM</span>
+                            <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">RSVP <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 3 -->
+                <div class="event-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://placehold.co/600x400" alt="Youth volunteers distributing food packages at a charity event" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-lightGreen text-islamicGreen px-3 py-1 rounded-full text-sm font-medium">Charity</span>
+                            <span class="text-gray-500 text-sm"><i class="far fa-calendar-alt mr-1"></i> 2nd July 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Ramadan Food Drive</h3>
+                        <p class="text-gray-600 mb-4">Help us pack and distribute food baskets to 200 vulnerable families across Ndola</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500"><i class="far fa-clock mr-1"></i> 8:30 AM</span>
+                            <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">RSVP <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-islamicGreen hover:bg-darkGreen text-white px-6 py-3 rounded-full font-medium">
+                    View All Events <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-16 bg-lightGreen">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-darkGreen">OUR PROGRAMS</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Program Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x400" alt="Young students studying Quran together" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-islamicGreen">Quranic Studies</h3>
+                        <p class="text-gray-600 mb-4">Weekly classes focusing on Quran recitation, memorization, and understanding for all levels.</p>
+                        <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Program Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x400" alt="Leadership training workshop in progress" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-islamicGreen">Youth Leadership</h3>
+                        <p class="text-gray-600 mb-4">Developing future leaders through mentorship, workshops, and practical projects.</p>
+                        <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Program Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x400" alt="Muslim professionals at a networking event" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-islamicGreen">Career Connect</h3>
+                        <p class="text-gray-600 mb-4">Professional development, internships, and networking opportunities for Muslim professionals.</p>
+                        <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Program Card 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x400" alt="Youth planting trees in a community garden" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-islamicGreen">Green Deen</h3>
+                        <p class="text-gray-600 mb-4">Environmental projects promoting Islamic teachings on sustainability and care for creation.</p>
+                        <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-islamicGreen hover:bg-darkGreen text-white px-6 py-3 rounded-full font-medium">
+                    Explore All Programs <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/Articles Section -->
+    <section id="blog" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-islamicGreen">LATEST ARTICLES</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x400" alt="Muslim student balancing books and prayer mat" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-500 text-sm">Islamic Living</span>
+                            <span class="text-gray-500 text-sm">June 5, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Balancing Studies and Faith in University</h3>
+                        <p class="text-gray-600 mb-4">Practical tips from CMY members who've successfully navigated university life while maintaining strong Islamic practices.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">By Sarah Banda</span>
+                            <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Article Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x400" alt="Historical Islamic sites in Zambia" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-500 text-sm">History</span>
+                            <span class="text-gray-500 text-sm">May 22, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Islam in Zambia: A 200-Year Journey</h3>
+                        <p class="text-gray-600 mb-4">Exploring the arrival and growth of Islam in Zambia, with focus on the Copperbelt region's unique Islamic heritage.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">By Ahmed Mwale</span>
+                            <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Article Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x400" alt="Muslim entrepreneur discussing business plans" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-500 text-sm">Career</span>
+                            <span class="text-gray-500 text-sm">April 30, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Islamic Ethics in Zambian Business Culture</h3>
+                        <p class="text-gray-600 mb-4">How young Muslim entrepreneurs are implementing Islamic business principles while adapting to Zambia's economic environment.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">By Jamal Chanda</span>
+                            <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-islamicGreen hover:bg-darkGreen text-white px-6 py-3 rounded-full font-medium">
+                    View Blog <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Youth Success Stories -->
+    <section class="py-16 bg-lightGreen">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-darkGreen">YOUTH SUCCESS STORIES</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/3 flex justify-center">
+                    <img src="https://placehold.co/400x500" alt="Hijab-wearing female engineer smiling at work" class="rounded-lg shadow-lg h-96 object-cover">
+                </div>
+                
+                <div class="md:w-2/3">
+                    <h3 class="text-2xl font-bold mb-4 text-islamicGreen">Fatima's Journey to Engineering</h3>
+                    <p class="mb-6 text-gray-700">"CMY gave me the confidence to pursue my dreams while remaining true to my faith. The mentorship I received through the Women in STEM program helped me navigate university life and secure my current position at ZCCM-IH."</p>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <p class="italic text-gray-700 mb-4">"This organization created a support system that helped me overcome challenges. Their career workshops connected me with Muslim professionals who became my role models."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/80x80" alt="Portrait of Fatima, young female engineer" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold">Fatima Ngoma</p>
+                                <p class="text-gray-600">Civil Engineer, ZCCM-IH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-islamicGreen">YOUTH RESOURCES</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Resource Card 1 -->
+                <div class="resource-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm transition duration-300 hover:shadow-md">
+                    <div class="p-6">
+                        <div class="bg-lightGreen text-islamicGreen w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-book text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Muslim Student Guide</h3>
+                        <p class="text-gray-600 mb-4">Practical handbook for maintaining faith while studying at Zambian educational institutions.</p>
+                        <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">Download PDF</a>
+                    </div>
+                </div>
+                
+                <!-- Resource Card 2 -->
+                <div class="resource-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm transition duration-300 hover:shadow-md">
+                    <div class="p-6">
+                        <div class="bg-lightGreen text-islamicGreen w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-briefcase text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Career Toolkit</h3>
+                        <p class="text-gray-600 mb-4">Resume templates, interview tips, and Islamic workplace ethics for young professionals.</p>
+                        <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">Explore</a>
+                    </div>
+                </div>
+                
+                <!-- Resource Card 3 -->
+                <div class="resource-card bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm transition duration-300 hover:shadow-md">
+                    <div class="p-6">
+                        <div class="bg-lightGreen text-islamicGreen w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-heart text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Marriage Guidance</h3>
+                        <p class="text-gray-600 mb-4">Islamic resources on courtship and marriage tailored for Zambian cultural context.</p>
+                        <a href="#" class="text-islamicGreen hover:text-darkGreen font-medium">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 bg-gray-50 rounded-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-darkGreen text-center">Mobile App Coming Soon!</h3>
+                <p class="text-gray-700 text-center mb-6">We're developing a CMY mobile app featuring prayer times, Quran study tools, event alerts, and more.</p>
+                <div class="max-w-md mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input type="text" placeholder="Your Email" class="flex-grow px1-4 py-2 border border-gray-300 rounded-lg">
+                        <button class="bg-islamicGreen hover:bg-darkGreen text-white px-6 py-2 rounded-lg font-medium">Notify Me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-lightGreen">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-darkGreen">CONTACT US</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Contact Info -->
+                <div class="lg:w-1/3">
+                    <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold mb-4 text-islamicGreen">Our Offices</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-islamicGreen mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Headquarters</h4>
+                                    <p class="text-gray-600">Kitwe Islamic Center, Chachacha Road, Kitwe</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-islamicGreen mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Phone</h4>
+                                    <p class="text-gray-600">+260 97 123 4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-islamicGreen mr-4 mt-1">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Email</h4>
+                                    <p class="text-gray-600">info@cmy-zambia.org</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-islamicGreen mr-4 mt-1">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">WhatsApp</h4>
+                                    <p class="text-gray-600">+260 97 765 4321</p>
+                                    <a href="#" class="text-islamicGreen hover:text-darkGreen text-sm">Chat with Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="lg:w-2/3">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4 text-islamicGreen">Send Us a Message</h3>
+                        
+                        <form class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="name" class="block mb-2 font-medium">Your Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-islamicGreen focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="email" class="block mb-2 font-medium">Email Address</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-islamicGreen focus:border-transparent">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block mb-2 font-medium">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-islamicGreen focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block mb-2 font-medium">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-islamicGreen focus:border-transparent"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-islamicGreen hover:bg-darkGreen text-white px-6 py-2 rounded-lg font-medium">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="py-16 bg-islamicGreen text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">SUPPORT OUR MISSION</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Your donations help us run educational programs, community services, and youth development initiatives across the Copperbelt region.</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white text-darkGreen p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">ZMW 100</h3>
+                    <p class="mb-4">Sponsor a youth for our monthly Islamic studies class</p>
+                    <button class="w-full bg-islamicGreen hover:bg-darkGreen text-white py-2 rounded-lg">Donate Now</button>
+                </div>
+                
+                <div class="bg-white text-darkGreen p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">ZMW 500</h3>
+                    <p class="mb-4">Support our library with Islamic books and resources</p>
+                    <button class="w-full bg-islamicGreen hover:bg-darkGreen text-white py-2 rounded-lg">Donate Now</button>
+                </div>
+                
+                <div class="bg-white text-darkGreen p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">Other Amount</h3>
+                    <p class="mb-4">Custom donation to support specific initiatives</p>
+                    <button class="w-full bg-islamicGreen hover:bg-darkGreen text-white py-2 rounded-lg">Donate Now</button>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-300 pt-8 max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4">Other Ways to Give</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="px-4 py-2 bg-white text-islamicGreen rounded-lg font-medium">Bank Transfer</a>
+                    <a href="#" class="px-4 py-2 bg-white text-islamicGreen rounded-lg font-medium">Mobile Money</a>
+                    <a href="#" class="px-4 py-2 bg-white text-islamicGreen rounded-lg font-medium">Volunteer</a>
+                    <a href="#" class="px-4 py-2 bg-white text-islamicGreen rounded-lg font-medium">Sponsor an Event</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-2 text-center text-darkGreen">Stay Connected</h3>
+                <p class="text-gray-700 text-center mb-6">Subscribe to our newsletter for updates on events, programs, and youth opportunities</p>
+                
+                <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                    <input type="email" placeholder="Your Email Address" class="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-islamicGreen focus:border-transparent">
+                    <button class="bg-islamicGreen hover:bg-darkGreen text-white px-6 py-3 rounded-lg font-medium">Subscribe</button>
+                </div>
+                
+                <div class="flex justify-center gap-4 mt-6">
+                    <a href="#" class="text-gray-600 hover:text-islamicGreen text-2xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-islamicGreen text-2xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-islamicGreen text-2xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-islamicGreen text-2xl"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-islamicGreen text-2xl"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkGreen text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">CMY</h3>
+                    <p class="mb-4">Empowering Muslim youth in Zambia's Copperbelt through faith, education, and community service.</p>
+                    <p>Registered NGO under Zambia Ministry of Youth</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Home</a></li>
+                        <li><a href="#" class="hover:underline">About Us</a></li>
+                        <li><a href="#" class="hover:underline">Events Calendar</a></li>
+                        <li><a href="#" class="hover:underline">Programs</a></li>
+                        <li><a href="#" class="hover:underline">Donate</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Islamic Articles</a></li>
+                        <li><a href="#" class="hover:underline">Prayer Times</a></li>
+                        <li><a href="#" class="hover:underline">Quran Recitations</a></li>
+                        <li><a href="#" class="hover:underline">Educational Materials</a></li>
+                        <li><a href="#" class="hover:underline">Career Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Cities We Serve</h3>
+                    <ul class="space-y-2">
+                        <li>Kitwe</li>
+                        <li>Ndola</li>
+                        <li>Chingola</li>
+                        <li>Luanshya</li>
+                        <li>Mufulira</li>
+                        <li>Chililabombwe</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+                <p>© 2023 Copperbelt Muslim Youth. All Rights Reserved.</p>
+                <p class="mt-2">Designed with <i class="fas fa-heart text-red-400"></i> for Zambian Muslim Youth</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="#" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg animate-bounce">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Announcement Bar -->
+    <div class="bg-yellow-100 text-center py-2 px-4">
+        <p class="text-sm font-medium">Join us for Jumu'ah prayer every Friday at 1PM | Masjid al-Falah, Kitwe</p>
+    </div>
+
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="flex items-center">
+                    <div class="bg-green-700 text-white p-2 rounded-md mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                        </svg>
+                    </div>
+                    <h1 class="text-xl font-bold text-green-700">CMY</h1>
+                </div>
+                <span class="ml-2 text-sm font-medium text-gray-600">Copperbelt Muslim Youth</span>
+            </div>
+
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-green-700 font-medium border-b-2 border-green-700 py-1">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-green-700 transition">About</a>
+                <a href="#events" class="text-gray-600 hover:text-green-700 transition">Events</a>
+                <a href="#programs" class="text-gray-600 hover:text-green-700 transition">Programs</a>
+    <title>Copperbelt Muslim Youth (CMY) - Zambia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #056644;
+            --light-green: #e6f2ef;
+            --dark-green: #024830;
+        }
+        
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            color: #333;
+        }
+        
+        .arabic {
+            font-family: 'Amiri', serif;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            direction: rtl;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(5, 102, 68, 0.8), rgba(5, 102, 68, 0.8)), 
+                        url('https://placehold.co/1200x600') center/cover no-repeat;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--light-green);
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Announcement Bar -->
+    <div class="bg-yellow-100 text-center py-2 px-4">
+        <p class="text-sm font-medium">Join us for Jumu'ah prayer every Friday at 1PM | Masjid al-Falah, Kitwe</p>
+    </div>
+    
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="flex items-center">
+                    <div class="bg-green-700 text-white p-2 rounded-md mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                        </svg>
+                    </div>
+                    <h1 class="text-xl font-bold text-green-700">CMY</h1>
+                </div>
+                <span class="ml-2 text-sm font-medium text-gray-600">Copperbelt Muslim Youth</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-green-700 font-medium border-b-2 border-green-700 py-1">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-green-700 transition">About</a>
+                <a href="#events" class="text-gray-600 hover:text-green-700 transition">Events</a>
+                <a href="#programs" class="text-gray-600 hover:text-green-700 transition">Programs</a>
+                <a href="#blog" class="text-gray-600 hover:text-green-700 transition">Blog</a>
+                <a href="#contact" class="text-gray-600 hover:text-green-700 transition">Contact</a>
+            </nav>
+            
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#donate" class="bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-800 transition font-medium">Donate</a>
+                <button class="p-2 text-gray-600 hover:text-green-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+                <button id="menu-toggle" class="p-2 text-gray-600 hover:text-green-700 md:hidden">
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+                <div class="px-4 py-2 space-y-3">
+                    <a href="#home" class="block text-green-700 font-medium">Home</a>
+                    <a href="#about" class="block text-gray-600 hover:text-green-700">About</a>
+                    <a href="#events" class="block text-gray-600 hover:text-green-700">Events</a>
+                    <a href="#programs" class="block text-gray-600 hover:text-green-700">Programs</a>
+                    <a href="#blog" class="block text-gray-600 hover:text-green-700">Blog</a>
+                    <a href="#contact" class="block text-gray-600 hover:text-green-700">Contact</a>
+                    <a href="#donate" class="block bg-green-700 text-white px-4 py-2 rounded-md text-center">Donate</a>
+                </div>
+            </div>
+        </header>
+
+        <script>
+            // Mobile menu toggle
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+
+            // Smooth scroll for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        // Close mobile menu after clicking
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        if (mobileMenu) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        </script>
+
+    </body>
+    </html>
